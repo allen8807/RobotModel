@@ -57,12 +57,13 @@
 	 ;; create the left goal post
 	 (nd Transform
 	     (setLocalPos 0 (eval -1 * (eval $GoalHalfWidth + $BarRadius)) 0)
-	     ;; (nd Box
-;; 		 (setExtents $GoalDepth $BarDiameter $GoalHeight)
-;; 		 (setMaterial matWhite)
-;; 		 )
+;;	      (nd Box
+ ;;		 (setExtents $GoalDepth $BarDiameter $GoalHeight)
+ ;;		 (setMaterial matYellow)
+ ;;		 )
 	     (nd BoxCollider
 		 (setBoxLengths $GoalDepth $BarDiameter $GoalHeight)
+(setMaterial matYellow)
 		 )
 	     )
 

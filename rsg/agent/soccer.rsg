@@ -169,6 +169,21 @@
        )   
 ) ;; of Space
 
+; create the  post (test)
+ (nd Transform
+       (setLocalPos 5.0 5.0 (eval $GoalHalfHeight)
+			       )
+       (nd Box
+       	     (setExtents $GoalDepth $BarDiameter $GoalHeight)
+	     (setMaterial $GoalMaterial)
+	     )
+       (nd BoxCollider
+       	     (setBoxLengths $GoalDepth $BarDiameter $GoalHeight)
+	     ) 	     
+       
+       ) 
+
+
 ; create the right goal
 (nd Space
     (setName RightGoalSpace)
