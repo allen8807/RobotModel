@@ -9,10 +9,10 @@
     ;
     (def $Neck_X        $Torso_X)
     (def $Neck_Y        $Torso_Y)
-    (def $Neck_Z        (eval $Torso_Z + 0.09))
-    (def $Neck_Radius   0.015)
-    (def $Neck_Length   0.08)
-    (def $Neck_Mass     0.050)
+    (def $Neck_Z        (eval $Torso_Z + 0.055))
+    (def $Neck_Radius   0.01)
+    (def $Neck_Length   0.01)
+    (def $Neck_Mass     0.005)
     
     
     ;
@@ -20,9 +20,9 @@
     ;
     (def $Head_X        $Neck_X)
     (def $Head_Y        $Neck_Y)
-    (def $Head_Z        (eval $Neck_Z + 0.065))
-    (def $Head_Radius   0.065)
-    (def $Head_Mass     0.001)
+    (def $Head_Z        (eval $Neck_Z + 0.025))
+    (def $Head_Radius   0.025)
+    (def $Head_Mass     0.06)
     
     ;
     ;Head effector 1 parameter
