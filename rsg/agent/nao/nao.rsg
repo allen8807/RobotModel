@@ -11,16 +11,16 @@
 ; The torso parameters
 ;
 
-(def $TorsoLength  0.1)
-(def $TorsoWidth   0.1)
-(def $TorsoHeight  0.18)
-(def $TorsoMass    1.2171)
+(def $TorsoLength  0.10)
+(def $TorsoWidth   0.056)
+(def $TorsoHeight  0.100)
+(def $TorsoMass    0.240)
 
 (def $TorsoInitX  0)
 (def $TorsoInitY  -1)
 (def $TorsoInitZ  1.5)
 
-(def $loadObj (eval Nao.UseTexture))
+(def $loadObj false)
 ;
 ;Begin Construct of Nao
 ;
