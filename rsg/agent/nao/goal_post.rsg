@@ -1,0 +1,70 @@
+;; -*- mode: lisp; -*-
+
+(RSG 0 1)
+(
+ (templ $name $x $y $theta
+	$FlagNameP $FlagNameM
+	$materialP $materialM)
+
+ (def $PostHeight  1.6 )
+ (def $MarkHeight  0.2 )
+
+   
+ (def $BarDiameter     0.08)
+ (def $BarDiameterM     0.1)
+ (def $BarRadius       (eval $BarDiameter / 2.0))
+
+
+ ;; create the goal to hanle the goal
+ (nd Space
+     (setName $name)
+     (nd Transform
+
+
+	 ;; create the left goal post
+	 (nd Transform
+	     (setLocalPos $x $y 0)
+	      (nd Box
+ 		 (setExtents $BarDiameter $BarDiameter $PostHeight)
+ 		 (setMaterial $materialP)
+ 		 )
+	     (nd BoxCollider
+		 (setBoxLengths $BarDiameter $BarDiameter $PostHeight)
+		 )
+	     )
+
+	 ;; create the right goal post
+	 (nd Transform
+	     (setLocalPos $x $y  0.6 )
+ 	     (nd Box
+ 		 (setExtents $BarDiameterM $BarDiameterM $MarkHeight)
+ 		 (setMaterial $materialM)
+ 		 )
+	     (nd BoxCollider
+		 (setBoxLengths $BarDiameterM $BarDiameterM $MarkHeight)
+		 )
+	     )
+
+ 
+
+	 ;; mark the goal (no visualization)
+	 (importScene rsg/agent/flag_no_viz.rsg
+		      $x
+		      $y
+		      0.8
+		      $FlagNameP
+		      )
+
+	 (importScene rsg/agent/flag_no_viz.rsg
+		      $x
+		      $y
+		      1.0
+		      $FlagNameM
+		      )
+
+	 ) ;; of Transform
+     ) ;; of Space
+ )
+
+
+

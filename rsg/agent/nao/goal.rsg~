@@ -63,7 +63,7 @@
  ;;		 )
 	     (nd BoxCollider
 		 (setBoxLengths $GoalDepth $BarDiameter $GoalHeight)
-;;(setMaterial matYellow)
+(setMaterial matYellow)
 		 )
 	     )
 

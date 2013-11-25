@@ -128,8 +128,8 @@
  (def $LeftGoalX (eval -1* (eval $FieldHalfLength + $GoalHalfDepth)))
  (importScene rsg/agent/nao/goal.rsg
 	      leftgoal
-	      $LeftGoalX 0 0
-;              5 5 0
+;	      $LeftGoalX 0 0
+              5 5 0
 	      G1L G2L
 	      matYellow)
 
